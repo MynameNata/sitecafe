@@ -8,6 +8,7 @@
 		
 		%link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}
 		%link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
+		
 	%body
 		.container-fluid
 			.row
@@ -23,7 +24,7 @@
 				
 				.col-lg-15.col-md-15.col-sm-15.col-xs-16.first-section
 					.row
-						.col-lg-9.col-md-9.col-sm-9.col-xs-16.first-section-box
+						.col-lg-9.col-md-16.col-sm-16.col-xs-16.first-section-box
 							%h1.first-section-title ELECTRONIC MINDS  
 							%h1.first-section-title-sm	AT VERO EOS ET ACCUSAMUS ET IUSTO ODIO DIGNISSIMOS DUCIMUS
 
@@ -34,11 +35,23 @@
 
 				.col-lg-15.col-md-15.col-sm-15.col-xs-16.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.next-section
 					.next-section-style
-						%p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+						%p.next-section-head Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 						.next-section-box
 							%img{'src'=>'./img/management.png'}
 							%h4.next-section-title Management
-							%p.next-section-discription Management Strategy and technology
+							%p.next-section-discription Strategy and technology
+						.next-section-box
+							%img{'src'=>'./img/conception.png'}
+							%h4.next-section-title Conception
+							%p.next-section-discription Steel, glass and metal
+						.next-section-box
+							%img{'src'=>'./img/design.png'}
+							%h4.next-section-title Design
+							%p.next-section-discription UI $ UX
+						.next-section-box
+							%img{'src'=>'./img/deployment.png'}
+							%h4.next-section-title Deployment
+							%p.next-section-discription Configuration and maintenance
 
 						.line
 					.row
@@ -47,7 +60,7 @@
 								%li.footer-item COMPANY NAME        
 								%li.footer-item company@gmail.com
 								%li.footer-item Wall street 80, 64293 NY
-							%button WHAT IS IT ALL FOR?
+							%button.footer-btn WHAT IS IT ALL FOR?
 							
 
 					

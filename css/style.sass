@@ -10,8 +10,29 @@ $bg-black: #000000
 
 $border-grey: 1px solid #9ea2a5
 $blue-btn: #67798f
-
 /*Variables- close*/
+
+/*media-variables -open*/
+$max-md: 1200px
+$max-sm: 993px
+$max-xs: 769px
+
+/*media-variables -close*/
+
+/*mixin -open*/
+@mixin btn($bgr, $border, $height, $width, $color, $font-size)
+	background: $bgr
+	border: $border
+	height: $height
+	width: $width
+	color: $color
+	font-size: $font-size
+
+@mixin font($font-size, $font-style)
+	font-size: $font-size
+	font-style: $font-style
+
+/*mixin -close*/
 
 
 /*defaulf settibngs -open*/
@@ -56,12 +77,21 @@ a:hover
 		@extend .header-size
 		background: url(../img/contacts.png)
 		
-
 /*header -close*/
 
 /*first-section - open*/
 .first-section
 	background: url(../img/rocket.png)
+
+	@media screen and (max-width: $max-sm)
+		background: $bg-grey
+
+	@media screen and (max-width: $max-xs)
+		background: $bg-grey
+
+	@media screen and (max-width: $max-md)
+		background: $bg-grey
+
 	background-repeat: no-repeat
 	background-size: 100% 100%
 	padding-top: 30px
@@ -70,6 +100,12 @@ a:hover
 
 	.first-section-box
 		margin-left: 100px
+
+		@media screen and (max-width: $max-sm)
+			margin-left: 0px
+
+		@media screen and (max-width: $max-xs)
+			margin-left: 0px
 
 		.first-section-title
 			font-size: 20px
@@ -85,25 +121,30 @@ a:hover
 		.first-section-title-sm,
 		.first-section-title
 			display: inline
+
+			@media screen and (max-width: $max-xs)
+				display: inline-block
+
 			text-transform: uppercase
 
 		.first-section-title-lg
 			font-size: 35px
 			margin: 90px 0 60px 0
 
+			@media screen and (max-width: $max-xs)
+				margin: 40px 0
+
 		.first-section-desription
 			width: 70%
-			font-size: 15px
-			font-style: italic
+			@include font(15px, italic)
 
 		.first-section-btn
-			background: $bg-grey
-			border: $border-grey
-			height: 60px
-			width: 250px
-			color: $font-white
-			font-size: 20px
 			margin: 60px 0 85px 0
+
+			@media screen and (max-width: $max-xs)
+				margin: 40px 0
+
+			@include btn($bg-grey, $border-grey, 60px, 250px, $font-white, 20px)
 
 /*first-section - close*/
 
@@ -115,23 +156,72 @@ a:hover
 		width: 70%
 		margin: 0 auto
 
+		@media screen and (max-width: $max-xs)
+			width: 100%
+			margin: 0
+
+		.next-section-head
+			margin: 80px 0 60px 0
+
+			@media screen and (max-width: $max-xs)
+				margin: 40px 0
+				padding-left: 20px
+
+			@include font(17px, normal)
+
 		.next-section-box
 			display: inline-block
-			width: 25%
-	.line
-		width: 90%
-		height: 2px
-		background: #9ea2a5
-		display: block
-		margin: 0 auto
+			width: 24%
+
+			@media screen and (max-width: $max-xs)
+				width: 49%
+
+			text-align: center
+			color: $font-black
+
+			.next-section-title
+				@include font(20px, normal)
+
+			.next-section-discription
+				@include font(12px, italic)
+				margin-top: 25px
+		.line
+			width: 90%
+			height: 2px
+			background: #9ea2a5
+			display: block
+			margin: 40px auto
+			@media screen and (max-width: $max-xs)
+				display: none
+
 /*next-section - close*/
 
 
 /*footer - open*/
 .footer
 	text-align: center
+	padding-bottom: 25px
+
+	@media screen and (max-width: $max-xs)
+		margin-top: 40px
+		text-align: left
+		padding-left: 20px
+
 	.footer-list,
 	.footer-item
 		display: inline-block
+		@media screen and (max-width: $max-xs)
+			display: block
 
+	.footer-item
+		margin-right: 40px
+		color: $font-grey
+
+	.footer-item:last-child
+		margin-right: 90px
+
+	.footer-btn
+		@include btn($blue-btn, $border-grey, 45px, 230px, $font-white, 18px)
+		@media screen and (max-width: $max-xs)
+			float: right
 /*footer - close*/
