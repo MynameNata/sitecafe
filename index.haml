@@ -1,0 +1,53 @@
+!!!
+%html
+	%head
+		%meta{:charset=>"utf-8"}
+		%meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
+		%title Test
+		
+		%link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
+	%body
+		.container-fluid
+			.row
+				-#header
+				.col-lg-1.col-md-1.col-sm-1.col-xs-16.header
+					%a.logo{'href'=>'#', 'title'=>'logo'}
+					.menu
+						%ul
+							%li
+								%a.info{'href'=>'#', 'title'=>'info'}
+							%li
+								%a.contacts{'href'=>'#', 'title'=>'contacts'}
+				
+				.col-lg-15.col-md-15.col-sm-15.col-xs-16.first-section
+					.row
+						.col-lg-9.col-md-9.col-sm-9.col-xs-16.first-section-box
+							%h1.first-section-title ELECTRONIC MINDS  
+							%h1.first-section-title-sm	AT VERO EOS ET ACCUSAMUS ET IUSTO ODIO DIGNISSIMOS DUCIMUS
+
+							%h2.first-section-title-lg At vero eos et accusamus et iusto
+
+							%p.first-section-desription Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+							%button.first-section-btn SED UT PERSCIPIO
+
+				.col-lg-15.col-md-15.col-sm-15.col-xs-16.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.next-section
+					.next-section-style
+						%p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+						.next-section-box
+							%img{'src'=>'./img/management.png'}
+							%h4.next-section-title Management
+							%p.next-section-discription Management Strategy and technology
+
+						.line
+					.row
+						.col-lg-16.col-md-16.col-sm-16.col-xs-16.footer
+							%ul.footer-list
+								%li.footer-item COMPANY NAME        
+								%li.footer-item company@gmail.com
+								%li.footer-item Wall street 80, 64293 NY
+							%button WHAT IS IT ALL FOR?
+							
+
+					
